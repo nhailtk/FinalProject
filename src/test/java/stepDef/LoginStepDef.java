@@ -15,13 +15,13 @@ import page.LoginPage;
 
 public class LoginStepDef {
     WebDriver driver;
-    LoginPage loginPage;
     HomePage homePage;
+    LoginPage loginPage;
 
     public LoginStepDef() {
         this.driver = DriverFactory.createDriver();
-        loginPage = new LoginPage(this.driver);
         homePage = new HomePage(this.driver);
+        loginPage = new LoginPage(this.driver);
     }
 
     @Given("^Open home page$")

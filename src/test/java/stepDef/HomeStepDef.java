@@ -7,22 +7,36 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en_scouse.An;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import page.HomePage;
+import page.LoginPage;
 
 public class HomeStepDef {
     WebDriver driver;
     HomePage homePage;
+    LoginPage loginPage;
 
     public HomeStepDef() {
-        driver = DriverFactory.createDriver();
-        homePage = new HomePage(driver);
+        this.driver = DriverFactory.createDriver();
+        homePage = new HomePage(this.driver);
+        loginPage = new LoginPage(this.driver);
     }
     @Given("^Open Home page$")
     public void openHomePage(){
         homePage.openHomePage();
+    }
+
+    @Given("^User successfully login to the web page$")
+    public void userHasLogin(){
+        homePage.openHomePage();
+        loginPage.clickMyAccountMenu();
+        loginPage.inputUserName("nhailtk@gmail.com");
+        loginPage.inputPassword("nhailtk@123456");
+        loginPage.clickLoginButton();
+        loginPage.verifyLoginPass();
     }
     @When("^Click on Shop Menu$")
     public void clickShopMenu(){
@@ -38,6 +52,12 @@ public class HomeStepDef {
     public void clickArrival1(){
         homePage.clickArrival1();
     }
+
+    @When("^Click the image in the Arrivals that has a price less than 450 rps$")
+    public void clickArrival2(){
+        homePage.clickArrival2();
+    }
+
      @When("^Click on Description tab for the book you clicked on.$")
      public void clickDescriptionTab(){
         homePage.clickDescriptionTab();
@@ -66,6 +86,50 @@ public class HomeStepDef {
     @When("^Enter the Coupon code as ‘krishnasakinala’ to get 50rps off on the total.$")
     public void inputCouponCode(){
         homePage.inputCouponCode();
+    }
+
+    @When("^Now click on Remove this icon in Check out page which removes that book from the grid.$")
+    public void clickIconRemove(){
+        homePage.clickIconRemove();
+    }
+
+    @And("^Click on text box value under quantity in Check out page to add or subtract books.$")
+    public void clickTextBoxQuantity(){
+        homePage.clickTextBoxQuantity();
+    }
+
+    @And("^Click on text box value under quantity in Check out page to subtract books.$")
+    public void clickSubTractTextBoxQuantity(){
+        homePage.clickSubTractTextBoxQuantity();
+    }
+
+    @Then("^Now after the above change ‘Update Basket’ button will turn into Clickable mode.$")
+    public void enableUpdateBasketButton(){
+        homePage.enableUpdateBasketButton();
+    }
+
+    @When("^Now click on Update Basket to reflect those changes$")
+    public void clickUpdateBasket(){
+        homePage.clickUpdateBasket();
+    }
+
+    @And("^Now user can find total and subtotal values just above the Proceed to Checkout button.$")
+    public void visibleTotalAndSubtotal(){
+        homePage.visibleTotalAndSubtotal();
+    }
+
+    @And("^Now click on Proceed to Check out button which navigates to payment gateway page.$")
+    public void clickButtonProcessToCheckout(){
+        homePage.clickButtonProcessToCheckout();
+    }
+
+    @Then("^User can view Billing Details,Order Details,Additional details and Payment gateway details.$")
+    public void viewItemInPaymentGatewayPage(){
+
+    }
+    @And("^Now user can fill his details in billing details form and can opt any payment in the payment gateway like Direct bank transfer,cheque,cash or paypal.$")
+    public void fillDataInPaymentGatewayPage(){
+
     }
 
     // Scenario: 1. Home Page with three Sliders only
@@ -120,7 +184,56 @@ public class HomeStepDef {
     //Scenario: 9. Home-Arrivals-Add to Basket-Items-Coupon
     @Then("^User can able to apply coupon by entering ‘krishnasakinala’ in the coupon textbox which give 50rps off on the total price$")
     public void verifyGetOffTotal(){
-        homePage.verifyGetOffTotal();
+        homePage.verifyCanApplyCoupon();
+    }
+
+    //Scenario: 10. Home-Arrivals-Add to Basket-Items-Coupon value<450
+    @Then("^User can not able to apply coupon by entering ‘krishnasakinala’ in the coupon textbox which give 50rps off on the total price$")
+    public void verifyCanNotApplyCoupon(){
+        homePage.verifyCanNotApplyCoupon();
+    }
+
+    //Scenario: 11. Home-Arrivals-Add to Basket-Items-Remove book
+    @Then("^User has the feasibility to remove the book at the time of check out also$")
+    public void verifyRemoveTheBook(){
+        homePage.verifyRemoveTheBook();
+    }
+
+    //Scenario: 12. Home-Arrivals-Add to Basket-Items-Add book
+    @Then("^User has the feasibility to Update Basket at the time of check out.$")
+    public void verifyUpdateBasket1(){
+        homePage.verifyAddBasket();
+    }
+
+    //Scenario: 13. Home-Arrivals-Add to Basket-Items-Check-out-Book Final price
+    @Then("^Now User can find the Total price of the book in the Check out grid.$")
+    public void verifyTotalPrice(){
+        homePage.verifyTotalPrice();
+    }
+
+    //Scenario: 14. Home-Arrivals-Add to Basket-Items-Check-out-Update Basket
+    @Then("^User has the feasibility to Update Basket at the time of check out$")
+    public void verifyUpdateBasket2(){
+        homePage.verifySubtractBasket();
+    }
+
+    //Scenario: 15. Home-Arrivals-Add to Basket-Items-Check-out-Total & Sub-total condition
+    @Then("^The total always > subtotal because taxes are added in the subtotal$")
+    public void verifyTotalGreaterThanSubtotal(){
+        homePage.verifyTotalGreaterThanSubtotal();
+
+    }
+
+    //
+    @Then("^Clicking on Proceed to Checkout button leads to payment gateway page$")
+    public void verifyLeadToPaymentGatewayPage(){
+        homePage.verifyLeadToPaymentGatewayPage();
+    }
+
+    //
+    @Then("^User has the feasibility to add coupon in the payment gateway page and also he can find billing,order and additional details.$")
+    public void verifyInformationInPaymentGatewayPage(){
+
     }
 
     @After
