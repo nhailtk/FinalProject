@@ -3,13 +3,11 @@ package page;
 import common.BasePage;
 import io.cucumber.gherkin.Parser;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 
 import java.util.List;
@@ -150,7 +148,32 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//input[@id='billing_city']")
     WebElement txtCity;
 
+    @FindBy(xpath = "//textarea[@id='order_comments']")
+    WebElement txtOrderComment;
 
+    @FindBy(xpath = "//input[@id='payment_method_cheque']")
+    WebElement radioPaymentMethod;
+
+    @FindBy(xpath = "//div[@class='woocommerce-info']//a[contains(text(),'Click here to enter your code')]")
+    WebElement linkAddCoupon;
+
+    @FindBy(xpath = "//input[@id='coupon_code']")
+    WebElement txtInputCoupon;
+
+    @FindBy(xpath = "//input[@name='apply_coupon']")
+    WebElement btnApplyCoupon2;
+
+    @FindBy(xpath = "//tr[@class='cart-subtotal']")
+    WebElement orderSubTotal;
+
+    @FindBy(xpath = "//tr[@class='cart-discount coupon-krishnasakinala']")
+    WebElement orderCartDiscount;
+
+    @FindBy(xpath = "//tr[@class='tax-rate tax-rate-roaming-tax-1']")
+    WebElement orderTaxRate;
+
+    @FindBy(xpath = "//tr[@class='order-total']")
+    WebElement orderTotal;
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -161,10 +184,6 @@ public class HomePage extends BasePage {
         getDriver().manage().window().maximize();
     }
 
-    public void openHomePageBeforeLogin() {
-        getDriver().get("http://practice.automationtesting.in/");
-        getDriver().manage().window().maximize();
-    }
 
     public void clickShopMenu() {
         shopMenu.click();
@@ -330,5 +349,43 @@ public class HomePage extends BasePage {
         Assert.assertTrue(panelAdditionalInformation.isDisplayed());
         Assert.assertTrue(panelOrderDetails.isDisplayed());
         Assert.assertTrue(panelPaymentGatewayDetails.isDisplayed());
+    }
+    public void fillDataInPaymentGatewayPage(){
+        txtFirstName.clear();
+        txtFirstName.sendKeys("Mai Hoa");
+        txtLastName.clear();
+        txtLastName.sendKeys("Nguyen");
+        txtEmail.clear();
+        txtEmail.sendKeys("nhailtk@gmail.com");
+        txtPhoneNumber.clear();
+        txtPhoneNumber.sendKeys("0971720714");
+        waitForSec(3);
+        Select itemCountry = new Select(pullDownCountry);
+        itemCountry.selectByVisibleText("Vietnam");
+        txtAddress.clear();
+        txtAddress.sendKeys("ngo cho Kham Thien");
+        txtCity.clear();
+        txtCity.sendKeys("Ha Noi");
+        waitForSec(3);
+        txtOrderComment.clear();
+        txtOrderComment.sendKeys("Ship in working day");
+        waitForSec(3);
+        radioPaymentMethod.isSelected();
+    }
+    public void verifyInformationInPaymentGatewayPage(){
+        waitForSec(10);
+        JavascriptExecutor jse = (JavascriptExecutor)getDriver();
+        jse.executeScript("window.scrollBy(0,-250)");
+        System.out.println("123456");
+        linkAddCoupon.click();
+        waitForSec(3);
+        txtInputCoupon.clear();
+        txtInputCoupon.sendKeys("krishnasakinala");
+        btnApplyCoupon2.click();
+        waitForSec(5);
+        Assert.assertTrue(orderSubTotal.isDisplayed());
+        Assert.assertTrue(orderCartDiscount.isDisplayed());
+        Assert.assertTrue(orderTaxRate.isDisplayed());
+        Assert.assertTrue(orderTotal.isDisplayed());
     }
 }

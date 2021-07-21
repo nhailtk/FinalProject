@@ -125,11 +125,11 @@ public class HomeStepDef {
 
     @Then("^User can view Billing Details,Order Details,Additional details and Payment gateway details.$")
     public void viewItemInPaymentGatewayPage(){
-
+        homePage.viewItemInPaymentGatewayPage();
     }
     @And("^Now user can fill his details in billing details form and can opt any payment in the payment gateway like Direct bank transfer,cheque,cash or paypal.$")
     public void fillDataInPaymentGatewayPage(){
-
+        homePage.fillDataInPaymentGatewayPage();
     }
 
     // Scenario: 1. Home Page with three Sliders only
@@ -224,16 +224,16 @@ public class HomeStepDef {
 
     }
 
-    //
+    //Scenario: 16. Home-Arrivals-Add to Basket-Items-Check-out functionality
     @Then("^Clicking on Proceed to Checkout button leads to payment gateway page$")
     public void verifyLeadToPaymentGatewayPage(){
         homePage.verifyLeadToPaymentGatewayPage();
     }
 
-    //
+    //Scenario: 17. Home-Arrivals-Add to Basket-Items-Check-out-Payment Gateway
     @Then("^User has the feasibility to add coupon in the payment gateway page and also he can find billing,order and additional details.$")
     public void verifyInformationInPaymentGatewayPage(){
-
+        homePage.verifyInformationInPaymentGatewayPage();
     }
 
     @After
