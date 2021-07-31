@@ -10,6 +10,7 @@
 
     <properties>
         <browser>chrome</browser>
+        <url></url>
     </properties>
 
     <dependencies>

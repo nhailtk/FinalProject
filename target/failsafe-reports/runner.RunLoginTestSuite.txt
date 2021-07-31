@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: runner.RunLoginTestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 162.837 s <<< FAILURE! - in runner.RunLoginTestSuite
+MY ACCOUNT - LOGIN.8. Login-Authentication  Time elapsed: 30.135 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User shouldn’t be signed in to his account rather a general webpage must be visible' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("User shouldn’t be signed in to his account rather a general webpage must be visible")
+public void user_shouldn_t_be_signed_in_to_his_account_rather_a_general_webpage_must_be_visible() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

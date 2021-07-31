@@ -83,7 +83,7 @@ public class HomeStepDef {
         homePage.clickMenuCart();
     }
 
-    @When("^Enter the Coupon code as ‘krishnasakinala’ to get 50rps off on the total.$")
+    @When("^Enter the Coupon code as krishnasakinala to get 50rps off on the total.$")
     public void inputCouponCode(){
         homePage.inputCouponCode();
     }
@@ -103,7 +103,7 @@ public class HomeStepDef {
         homePage.clickSubTractTextBoxQuantity();
     }
 
-    @Then("^Now after the above change ‘Update Basket’ button will turn into Clickable mode.$")
+    @Then("^Now after the above change Update Basket button will turn into Clickable mode.$")
     public void enableUpdateBasketButton(){
         homePage.enableUpdateBasketButton();
     }
@@ -130,6 +130,11 @@ public class HomeStepDef {
     @And("^Now user can fill his details in billing details form and can opt any payment in the payment gateway like Direct bank transfer,cheque,cash or paypal.$")
     public void fillDataInPaymentGatewayPage(){
         homePage.fillDataInPaymentGatewayPage();
+    }
+
+    @And("^Now click on Place Order button to complete process$")
+    public void clickButtonPlaceOrder(){
+        homePage.clickButtonPlaceOrder();
     }
 
     // Scenario: 1. Home Page with three Sliders only
@@ -182,13 +187,13 @@ public class HomeStepDef {
     }
 
     //Scenario: 9. Home-Arrivals-Add to Basket-Items-Coupon
-    @Then("^User can able to apply coupon by entering ‘krishnasakinala’ in the coupon textbox which give 50rps off on the total price$")
+    @Then("^User can able to apply coupon by entering krishnasakinala in the coupon textbox which give 50rps off on the total price$")
     public void verifyGetOffTotal(){
         homePage.verifyCanApplyCoupon();
     }
 
     //Scenario: 10. Home-Arrivals-Add to Basket-Items-Coupon value<450
-    @Then("^User can not able to apply coupon by entering ‘krishnasakinala’ in the coupon textbox which give 50rps off on the total price$")
+    @Then("User can not able to apply coupon by entering krishnasakinala in the coupon textbox which give 50rps off on the total price$")
     public void verifyCanNotApplyCoupon(){
         homePage.verifyCanNotApplyCoupon();
     }
@@ -234,6 +239,11 @@ public class HomeStepDef {
     @Then("^User has the feasibility to add coupon in the payment gateway page and also he can find billing,order and additional details.$")
     public void verifyInformationInPaymentGatewayPage(){
         homePage.verifyInformationInPaymentGatewayPage();
+    }
+
+    @Then("^On clicking place-order button user completes the process where the page navigates to Order confirmation page with order details,bank details,customer details and billing details.$")
+    public void verifyOrderConfirmationPage(){
+        homePage.verifyOrderConfirmationPage();
     }
 
     @After

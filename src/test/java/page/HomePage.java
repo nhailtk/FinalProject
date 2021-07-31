@@ -1,22 +1,20 @@
 package page;
 
 import common.BasePage;
-import io.cucumber.gherkin.Parser;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.Select;;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class HomePage extends BasePage {
     WebDriver driver;
-    String temp;
-    int oldQuantity1, oldQuantity2;
+    String temp, lblNumberItemInCart;
+    int oldQuantity1, oldQuantity2, imageItem = 1, numberItem;
+    String lblSubTotal, lblTax, lblPaymentMethod, lblTotal, price,subTotal, tax, total;
+    float st, t, tt;
 
     //WebElement shopMenu = driver.findElement(By.xpath("//ul[@id='main-nav']//li[@id='menu-item-40']"));
     @FindBy(xpath = "//ul[@id='main-nav']//li[@id='menu-item-40']")
@@ -52,11 +50,17 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@id='comments']//h2[contains(text(),'Reviews')]")
     WebElement arrival_Image_Reviews;
 
+    @FindBy(xpath = "//p[@class='price']//span[contains(text(),'500.00')]")
+    WebElement lblPrice;
+
     @FindBy(xpath = "//span[contains(text(),'item')]")
     WebElement item;
 
-    @FindBy(xpath = "//span[@class='amount']")
-    WebElement priceInMenu;
+    @FindBy(xpath = "//span[@class='amount' and contains(text(),'₹')]")
+    WebElement priceInMenu1;
+
+    @FindBy(xpath = "//span[contains(text(),'₹400.00')]")
+    WebElement priceInMenu2;
 
     @FindBy(xpath = "//span[@class='woocommerce-Price-amount amount']")
     WebElement priceItem;
@@ -79,7 +83,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//input[@type='submit' and @value ='Apply Coupon']")
     WebElement btnApplyCoupon;
 
-    @FindBy(xpath = "//tr[@class='cart-discount coupon-krishnasakinala']//th")
+    @FindBy(xpath = "//tr[@class='cart-discount coupon-krishnasakinala']//span[contains(text(),'50.00')]")
     WebElement lblGetOffTotal;
 
     @FindBy(xpath = "//ul[@class='woocommerce-error']//li[contains(text(),'The minimum spend for this coupon is ')]")
@@ -88,7 +92,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//a[@data-product_id ='160']")
     WebElement iconRemove;
 
-    @FindBy(xpath = "//div[@class='woocommerce']//p[@class='cart-empty' and contains(text(),'Your basket is currently empty.')]")
+    @FindBy(xpath = "//p[contains(text(),'Your basket is currently empty.')]")
     WebElement lblEmptyBook;
 
     @FindBy(xpath = "//div[@class='quantity']//input[@title = 'Qty']")
@@ -98,9 +102,9 @@ public class HomePage extends BasePage {
     WebElement btnUpdateBasket;
 
     @FindBy(xpath = "//td[@class='product-subtotal']//span[@class='woocommerce-Price-amount amount']")
-    WebElement lblSubTotal;
+    WebElement SubTotal;
 
-    @FindBy(xpath = "//tr[@class='order-total']")
+    @FindBy(xpath = "//tr[@class='order-total']//span[@class='woocommerce-Price-amount amount']")
     WebElement totalPrice;
 
     @FindBy(xpath = "//tr[@class='tax-rate tax-rate-roaming-tax-1']")
@@ -163,17 +167,42 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//input[@name='apply_coupon']")
     WebElement btnApplyCoupon2;
 
-    @FindBy(xpath = "//tr[@class='cart-subtotal']")
+    @FindBy(xpath = "//tr[@class='cart-subtotal']//span[contains(text(),'500.00')]")
     WebElement orderSubTotal;
 
     @FindBy(xpath = "//tr[@class='cart-discount coupon-krishnasakinala']")
     WebElement orderCartDiscount;
 
-    @FindBy(xpath = "//tr[@class='tax-rate tax-rate-roaming-tax-1']")
+    @FindBy(xpath = "//tr[@class='tax-rate tax-rate-roaming-tax-1']//span[contains(text(),'25.00')]")
     WebElement orderTaxRate;
 
-    @FindBy(xpath = "//tr[@class='order-total']")
+    @FindBy(xpath = "//tr[@class='order-total']//span[contains(text(),'525.00')]")
     WebElement orderTotal;
+
+    @FindBy(xpath = "//input[@id='place_order']")
+    WebElement btnPlaceOrder;
+
+    @FindBy(xpath = "//th[contains(text(),'Subtotal:')]//following-sibling::td//span")
+    WebElement orderSubTotal_Confirm;
+
+    @FindBy(xpath = "//th[contains(text(),'Roaming Tax:')]//following-sibling::td//span")
+    WebElement orderTaxRate_Confirm;
+
+    @FindBy(xpath = "//th[contains(text(),'Total:')]//following-sibling::td//span")
+    WebElement orderTotal_Confirm;
+
+    @FindBy(xpath = "//th[contains(text(),'Payment Method:')]//following-sibling::td")
+    WebElement paymentMethod_Confirm;
+
+    @FindBy(xpath = "//th[contains(text(),'Email:')]//following-sibling::td")
+    WebElement lblEmail_Confirm;
+
+    @FindBy(xpath = "//th[contains(text(),'Telephone:')]//following-sibling::td")
+    WebElement lblPhone_Confirm;
+
+    @FindBy(xpath = "//address")
+    WebElement address_Confirm;
+
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -190,6 +219,11 @@ public class HomePage extends BasePage {
     }
 
     public void clickHomeMenuButton() {
+        //get item number in the cart
+        String a[] = item.getText().split(" ");
+        String tmp = a[0];
+        numberItem = Integer.valueOf(tmp);
+        //======================
         homeMenuButton.click();
     }
 
@@ -206,6 +240,7 @@ public class HomePage extends BasePage {
     }
 
     public void clickArrival2() {
+        imageItem = 2;
         arrival2.click();
     }
 
@@ -214,8 +249,7 @@ public class HomePage extends BasePage {
     }
 
     public void clickDescriptionTab() {
-        //driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        waitForSec(3);
+        waitElementVisible(descriptionTab);
         descriptionTab.click();
     }
 
@@ -224,8 +258,7 @@ public class HomePage extends BasePage {
     }
 
     public void clickReviewTab() {
-        //driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        waitForSec(3);
+        waitElementVisible(reviewsTab);
         reviewsTab.click();
     }
 
@@ -235,6 +268,32 @@ public class HomePage extends BasePage {
 
     public void clickAddToBasket() {
         btnAddToBasket.click();
+        if (imageItem == 1) {
+            numberItem += 1;
+            if (numberItem == 1) {
+                lblNumberItemInCart = String.valueOf(numberItem) + " Item";
+            } else {
+                lblNumberItemInCart = String.valueOf(numberItem) + " Items";
+            }
+            validatePriceInCart();
+        }
+        if (imageItem == 2) {
+            lblNumberItemInCart = "1 Item";
+        }
+    }
+    public void validatePriceInCart(){
+        String b[] = lblPrice.getText().split("");
+        price = b[1];
+        for (int i = 2; i < b.length; i++) {
+            price = price + b[i];
+        }
+        float c = Float.valueOf(price);
+        st = numberItem * c;
+        String x = "₹" + String.valueOf(st) + "0";
+        subTotal = x;
+        if (x.length() > 7) {
+            subTotal = x.substring(0, 2) + "," + x.substring(2, x.length());
+        }
     }
 
     public void inputGreaterThanMaxItem() {
@@ -252,23 +311,25 @@ public class HomePage extends BasePage {
     }
 
     public void verifyCheckOutPage() {
+        waitElementVisible(lblBasketTotals);
         Assert.assertTrue(lblBasketTotals.isDisplayed());
     }
 
     public void inputCouponCode() {
+        waitElementVisible(txtCouponCode);
         txtCouponCode.clear();
         txtCouponCode.sendKeys("krishnasakinala");
     }
 
     public void verifyCanApplyCoupon() {
         btnApplyCoupon.click();
-        waitForSec(3);
-        Assert.assertEquals(lblGetOffTotal.getText(), "Coupon: krishnasakinala");
+        waitElementVisible(lblGetOffTotal);
+        Assert.assertEquals("₹50.00", lblGetOffTotal.getText());
     }
 
     public void verifyCanNotApplyCoupon() {
         btnApplyCoupon.click();
-        waitForSec(10);
+        waitElementVisible(lblErrorCoupon);
         Assert.assertEquals(lblErrorCoupon.getText(), "The minimum spend for this coupon is ₹450.00.");
     }
 
@@ -277,8 +338,8 @@ public class HomePage extends BasePage {
     }
 
     public void verifyRemoveTheBook() {
-        waitForSec(5);
-        Assert.assertFalse(!iconRemove.isDisplayed());
+        waitElementVisible(lblEmptyBook);
+        Assert.assertEquals("Your basket is currently empty.", lblEmptyBook.getText());
     }
 
     public void verifyInputGreaterThanMaxItem() {
@@ -286,9 +347,15 @@ public class HomePage extends BasePage {
     }
 
     public void verifyArrivalImageAddToBasket() {
-        waitForSec(3);
-        Assert.assertTrue(item.isDisplayed());
-        Assert.assertTrue(priceInMenu.isDisplayed());
+        // waitElementVisible(item);
+        Assert.assertEquals(lblNumberItemInCart, item.getText());
+        if (imageItem == 1) {
+            Assert.assertEquals(subTotal, priceInMenu1.getText());
+        }
+        if (imageItem == 2) {
+            Assert.assertEquals("₹400.00", priceInMenu2.getText());
+        }
+
     }
 
     public void clickTextBoxQuantity() {
@@ -310,47 +377,57 @@ public class HomePage extends BasePage {
     }
 
     public void verifyAddBasket() {
-        waitForSec(5);
+        waitElementVisible(inputQuantity);
         String temp = String.valueOf(oldQuantity1 + 1);
         Assert.assertEquals(temp, inputQuantity.getAttribute("value"));
 
     }
 
     public void verifySubtractBasket() {
-        waitForSec(5);
+        waitElementVisible(inputQuantity);
         String temp = String.valueOf(oldQuantity2 - 1);
-        System.out.println(temp);
-        System.out.println(inputQuantity.getAttribute("value"));
         Assert.assertEquals(temp, inputQuantity.getAttribute("value"));
     }
 
     public void verifyTotalPrice() {
-        Assert.assertTrue(totalPrice.isDisplayed());
+        t = st*5/100;
+        tax = "₹" + String.valueOf(t) + "0";
+         tt = st + t;
+        total = "₹" + String.valueOf(tt) + "0";
+        if (total.length() > 7) {
+            total = total.substring(0, 2) + "," + total.substring(2, total.length());
+        }
+        Assert.assertEquals(total,totalPrice.getText());
     }
 
-    public void visibleTotalAndSubtotal(){
+    public void visibleTotalAndSubtotal() {
         Assert.assertTrue(totalPrice.isDisplayed());
         Assert.assertTrue(cartSubTotal.isDisplayed());
     }
 
-    public void verifyTotalGreaterThanSubtotal(){
+    public void verifyTotalGreaterThanSubtotal() {
         Assert.assertTrue(taxRate.isDisplayed());
     }
 
-    public void clickButtonProcessToCheckout(){
+    public void clickButtonProcessToCheckout() {
         btnProcessToCheckout.click();
     }
 
-    public void verifyLeadToPaymentGatewayPage(){
+    public void verifyLeadToPaymentGatewayPage() {
         Assert.assertTrue(lblBillingDetails.isDisplayed());
     }
-    public void viewItemInPaymentGatewayPage(){
+
+    public void viewItemInPaymentGatewayPage() {
         Assert.assertTrue(panelBillingDetails.isDisplayed());
         Assert.assertTrue(panelAdditionalInformation.isDisplayed());
         Assert.assertTrue(panelOrderDetails.isDisplayed());
         Assert.assertTrue(panelPaymentGatewayDetails.isDisplayed());
+//        lblSubTotal = orderSubTotal.getText();
+//        lblTax = orderTaxRate.getText();
+//        lblTotal = orderTotal.getText();
     }
-    public void fillDataInPaymentGatewayPage(){
+
+    public void fillDataInPaymentGatewayPage() {
         txtFirstName.clear();
         txtFirstName.sendKeys("Mai Hoa");
         txtLastName.clear();
@@ -358,34 +435,52 @@ public class HomePage extends BasePage {
         txtEmail.clear();
         txtEmail.sendKeys("nhailtk@gmail.com");
         txtPhoneNumber.clear();
-        txtPhoneNumber.sendKeys("0971720714");
-        waitForSec(3);
+        txtPhoneNumber.sendKeys("0979780706");
+        //waitElementVisible(pullDownCountry);
         Select itemCountry = new Select(pullDownCountry);
         itemCountry.selectByVisibleText("Vietnam");
         txtAddress.clear();
-        txtAddress.sendKeys("ngo cho Kham Thien");
+        txtAddress.sendKeys("Kham Thien");
         txtCity.clear();
         txtCity.sendKeys("Ha Noi");
-        waitForSec(3);
+        waitElementVisible(txtOrderComment);
         txtOrderComment.clear();
         txtOrderComment.sendKeys("Ship in working day");
-        waitForSec(3);
+        waitElementVisible(radioPaymentMethod);
         radioPaymentMethod.isSelected();
+        lblPaymentMethod = radioPaymentMethod.getText();
+        System.out.println(lblPaymentMethod);
+
     }
-    public void verifyInformationInPaymentGatewayPage(){
-        waitForSec(10);
-        JavascriptExecutor jse = (JavascriptExecutor)getDriver();
-        jse.executeScript("window.scrollBy(0,-250)");
-        System.out.println("123456");
-        linkAddCoupon.click();
-        waitForSec(3);
-        txtInputCoupon.clear();
-        txtInputCoupon.sendKeys("krishnasakinala");
-        btnApplyCoupon2.click();
-        waitForSec(5);
-        Assert.assertTrue(orderSubTotal.isDisplayed());
-        Assert.assertTrue(orderCartDiscount.isDisplayed());
-        Assert.assertTrue(orderTaxRate.isDisplayed());
-        Assert.assertTrue(orderTotal.isDisplayed());
+
+    public void verifyInformationInPaymentGatewayPage() {
+//        waitForSec(30);
+//        JavascriptExecutor jse = (JavascriptExecutor)getDriver();
+//        jse.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
+//        waitForSec(5);
+//        linkAddCoupon.click();
+//        waitForSec(5);
+//        txtInputCoupon.clear();
+//        txtInputCoupon.sendKeys("krishnasakinala");
+//        btnApplyCoupon2.click();
+        waitElementVisible(orderSubTotal);
+        Assert.assertEquals(subTotal, orderSubTotal.getText());
+        //Assert.assertTrue(orderCartDiscount.isDisplayed());//coupon has
+        Assert.assertEquals(tax, orderTaxRate.getText());
+        Assert.assertEquals(total, orderTotal.getText());
+    }
+
+    public void clickButtonPlaceOrder() {
+        btnPlaceOrder.click();
+        waitForSec(30);
+    }
+
+    public void verifyOrderConfirmationPage() {
+        Assert.assertEquals(lblSubTotal, orderSubTotal_Confirm.getText());
+        Assert.assertEquals(lblTax, orderTaxRate_Confirm.getText());
+        System.out.println("1");
+        Assert.assertEquals(lblPaymentMethod, paymentMethod_Confirm.getText());
+        Assert.assertEquals(lblTotal, orderTotal_Confirm.getText());
+        System.out.println("2");
     }
 }

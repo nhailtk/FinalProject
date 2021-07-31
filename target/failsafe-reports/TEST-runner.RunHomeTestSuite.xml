@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report-3.0.xsd" version="3.0" name="runner.RunHomeTestSuite" time="672.75" tests="18" errors="15" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\FinalProject\target\test-classes;D:\FinalProject\target\FinalProject-1.0-SNAPSHOT.jar;C:\Users\Admin\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\Admin\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Admin\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Admin\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Admin\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Admin\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Admin\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Admin\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Admin\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Admin\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\Admin\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Admin\.m2\repository\io\github\bonigarcia\webdrivermanager\4.4.3\webdrivermanager-4.4.3.jar;C:\Users\Admin\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Admin\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;C:\Users\Admin\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\Admin\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\Admin\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.3\httpclient5-5.0.3.jar;C:\Users\Admin\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.2\httpcore5-5.0.2.jar;C:\Users\Admin\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0.2\httpcore5-h2-5.0.2.jar;C:\Users\Admin\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\Admin\.m2\repository\org\rauschig\jarchivelib\1.1.0\jarchivelib-1.1.0.jar;C:\Users\Admin\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\Admin\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-java\6.10.4\cucumber-java-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-core\6.10.4\cucumber-core-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-gherkin\6.10.4\cucumber-gherkin-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-gherkin-messages\6.10.4\cucumber-gherkin-messages-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\messages\15.0.0\messages-15.0.0.jar;C:\Users\Admin\.m2\repository\io\cucumber\tag-expressions\3.0.1\tag-expressions-3.0.1.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-expressions\10.3.0\cucumber-expressions-10.3.0.jar;C:\Users\Admin\.m2\repository\io\cucumber\datatable\3.5.0\datatable-3.5.0.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-plugin\6.10.4\cucumber-plugin-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\docstring\6.10.4\docstring-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\html-formatter\13.0.0\html-formatter-13.0.0.jar;C:\Users\Admin\.m2\repository\io\cucumber\create-meta\4.0.0\create-meta-4.0.0.jar;C:\Users\Admin\.m2\repository\org\apiguardian\apiguardian-api\1.1.1\apiguardian-api-1.1.1.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-junit\6.10.4\cucumber-junit-6.10.4.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Bangkok"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire3760319660944762692\surefirebooter1563021428545241431.jar C:\Users\Admin\AppData\Local\Temp\surefire3760319660944762692 2021-07-31T14-32-17_573-jvmRun1 surefire8039847382245402161tmp surefire_08375667548151536189tmp"/>
+    <property name="surefire.test.class.path" value="D:\FinalProject\target\test-classes;D:\FinalProject\target\FinalProject-1.0-SNAPSHOT.jar;C:\Users\Admin\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Admin\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\Admin\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Admin\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Admin\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Admin\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Admin\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Admin\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Admin\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Admin\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Admin\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\Admin\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Admin\.m2\repository\io\github\bonigarcia\webdrivermanager\4.4.3\webdrivermanager-4.4.3.jar;C:\Users\Admin\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Admin\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;C:\Users\Admin\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\Admin\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\Admin\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.3\httpclient5-5.0.3.jar;C:\Users\Admin\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.2\httpcore5-5.0.2.jar;C:\Users\Admin\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0.2\httpcore5-h2-5.0.2.jar;C:\Users\Admin\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\Admin\.m2\repository\org\rauschig\jarchivelib\1.1.0\jarchivelib-1.1.0.jar;C:\Users\Admin\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\Admin\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-java\6.10.4\cucumber-java-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-core\6.10.4\cucumber-core-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-gherkin\6.10.4\cucumber-gherkin-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-gherkin-messages\6.10.4\cucumber-gherkin-messages-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\messages\15.0.0\messages-15.0.0.jar;C:\Users\Admin\.m2\repository\io\cucumber\tag-expressions\3.0.1\tag-expressions-3.0.1.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-expressions\10.3.0\cucumber-expressions-10.3.0.jar;C:\Users\Admin\.m2\repository\io\cucumber\datatable\3.5.0\datatable-3.5.0.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-plugin\6.10.4\cucumber-plugin-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\docstring\6.10.4\docstring-6.10.4.jar;C:\Users\Admin\.m2\repository\io\cucumber\html-formatter\13.0.0\html-formatter-13.0.0.jar;C:\Users\Admin\.m2\repository\io\cucumber\create-meta\4.0.0\create-meta-4.0.0.jar;C:\Users\Admin\.m2\repository\org\apiguardian\apiguardian-api\1.1.1\apiguardian-api-1.1.1.jar;C:\Users\Admin\.m2\repository\io\cucumber\cucumber-junit\6.10.4\cucumber-junit-6.10.4.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Admin"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_181\jre"/>
+    <property name="basedir" value="D:\FinalProject"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire3760319660944762692\surefirebooter1563021428545241431.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_181\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_181-b13"/>
+    <property name="user.name" value="Admin"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Admin\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Admin\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_181"/>
+    <property name="user.dir" value="D:\FinalProject"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Git\cmd;C:\Driver\apache-maven-3.8.1\bin;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\GitHubDesktop\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.181-b13"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="1. Home Page with three Sliders only" classname="HOME PAGE" time="52.261">
+    <system-out><![CDATA[
+Scenario: 1. Home Page with three Sliders only        &amp#27;[90m# src/test/java/feature/Home.feature:3&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mOpen Home page&amp#27;[0m                                &amp#27;[90m# stepDef.HomeStepDef.openHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                             &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                   &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three sliders&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifySlidersNumber()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 360199 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 13224
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:32:32 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 45732
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:33:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="2. Home page with three Arrivals only" classname="HOME PAGE" time="20.908">
+    <system-out><![CDATA[
+Scenario: 2. Home page with three Arrivals only        &amp#27;[90m# src/test/java/feature/Home.feature:9&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mOpen Home page&amp#27;[0m                                 &amp#27;[90m# stepDef.HomeStepDef.openHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                              &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                    &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 360197 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 10520
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:33:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 41224
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:33:31 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="3. Home page - Images in Arrivals should navigate" classname="HOME PAGE" time="35.916">
+    <system-out><![CDATA[
+Scenario: 3. Home page - Images in Arrivals should navigate                                                  &amp#27;[90m# src/test/java/feature/Home.feature:15&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mOpen Home page&amp#27;[0m                                                                                       &amp#27;[90m# stepDef.HomeStepDef.openHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                          &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                       &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 233842 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 23112
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:33:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 33211
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:34:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="4. Home page - Arrivals-Images-Description" classname="HOME PAGE" time="28.229">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 4. Home page - Arrivals-Images-Description                                                         &amp#27;[90m# src/test/java/feature/Home.feature:23&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mOpen Home page&amp#27;[0m                                                                                       &amp#27;[90m# stepDef.HomeStepDef.openHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                          &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                       &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mClick on Description tab for the book you clicked on.&amp#27;[0m                                                 &amp#27;[90m# stepDef.HomeStepDef.clickDescriptionTab()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.clickDescriptionTab(HomePage.java:239)
+	at stepDef.HomeStepDef.clickDescriptionTab(HomeStepDef.java:63)
+	at âœ½.Click on Description tab for the book you clicked on.(file:///D:/FinalProject/src/test/java/feature/Home.feature:30)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThere should be a description regarding that book the user clicked on&amp#27;[0m                                 &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageDescription()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 233842 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 5473
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:34:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 35977
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:34:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="5. Home page - Arrivals-Images-Reviews" classname="HOME PAGE" time="28.866">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 5. Home page - Arrivals-Images-Reviews                                                             &amp#27;[90m# src/test/java/feature/Home.feature:33&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mOpen Home page&amp#27;[0m                                                                                       &amp#27;[90m# stepDef.HomeStepDef.openHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                          &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                       &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mClick on Reviews tab for the book you clicked on.&amp#27;[0m                                                     &amp#27;[90m# stepDef.HomeStepDef.clickReviewTab()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.clickReviewTab(HomePage.java:248)
+	at stepDef.HomeStepDef.clickReviewTab(HomeStepDef.java:68)
+	at âœ½.Click on Reviews tab for the book you clicked on.(file:///D:/FinalProject/src/test/java/feature/Home.feature:40)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThere should be a Reviews regarding that book the user clicked on&amp#27;[0m                                     &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageReviews()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 233842 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 1623
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:34:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 23173
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:35:05 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="6. Home page - Arrivals-Images-Add to Basket" classname="HOME PAGE" time="32.845">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 6. Home page - Arrivals-Images-Add to Basket                                                       &amp#27;[90m# src/test/java/feature/Home.feature:43&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mOpen Home page&amp#27;[0m                                                                                       &amp#27;[90m# stepDef.HomeStepDef.openHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                          &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                       &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                 &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                  &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:51)
+&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 193416 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 2704
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:35:09 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 21934
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:35:38 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="7. Home page - Arrivals-Add to Basket with more books" classname="HOME PAGE" time="33.185">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 7. Home page - Arrivals-Add to Basket with more books                                                             &amp#27;[90m# src/test/java/feature/Home.feature:53&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mOpen Home page&amp#27;[0m                                                                                                      &amp#27;[90m# stepDef.HomeStepDef.openHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                                         &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                                      &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                                  &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m                &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                                &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                                 &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:61)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mSelect more books than the books in stock.Ex if the stock has 20 books, try to add 21.Click the add to basket button&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.InputGreaterThanMaxItem()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mNow it throws an error prompt like you must enter a value between 1 and 20&amp#27;[0m                                           &amp#27;[90m# stepDef.HomeStepDef.verifyInputGreaterThanMaxItem()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 184294 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 37626
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:35:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 33152
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:36:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="8. Home-Arrivals-Add to Basket-Items" classname="HOME PAGE" time="31.311">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 8. Home-Arrivals-Add to Basket-Items                                                                               &amp#27;[90m# src/test/java/feature/Home.feature:65&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mOpen Home page&amp#27;[0m                                                                                                       &amp#27;[90m# stepDef.HomeStepDef.openHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                                          &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                                       &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m                 &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                                 &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                                  &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:73)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Item link which navigates to proceed to check out page.&amp#27;[0m                                                  &amp#27;[90m# stepDef.HomeStepDef.clickMenuCart()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser can click on the Item link in menu item after adding the book in to the basket which leads to the check out page&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyCheckOutPage()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 184294 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 33983
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:36:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 35170
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:36:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="9. Home-Arrivals-Add to Basket-Items-Coupon" classname="HOME PAGE" time="42.676">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 9. Home-Arrivals-Add to Basket-Items-Coupon                                                                            &amp#27;[90m# src/test/java/feature/Home.feature:77&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mOpen Home page&amp#27;[0m                                                                                                           &amp#27;[90m# stepDef.HomeStepDef.openHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                                        &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                                              &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                                           &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                                       &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m                     &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                                     &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                                      &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:85)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Item link which navigates to proceed to check out page.&amp#27;[0m                                                      &amp#27;[90m# stepDef.HomeStepDef.clickMenuCart()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser can click on the Item link in menu item after adding the book in to the basket which leads to the check out page&amp#27;[0m     &amp#27;[90m# stepDef.HomeStepDef.verifyCheckOutPage()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mEnter the Coupon code as â€˜krishnasakinalaâ€™ to get 50rps off on the total.&amp#27;[0m                                                 &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser can able to apply coupon by entering â€˜krishnasakinalaâ€™ in the coupon textbox which give 50rps off on the total price&amp#27;[0m &amp#27;[90m# null&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 184294 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 41619
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:36:46 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 1248
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:37:25 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="10. Home-Arrivals-Add to Basket-Items-Coupon value&lt;450" classname="HOME PAGE" time="32.383">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 10. Home-Arrivals-Add to Basket-Items-Coupon value<450                                                                     &amp#27;[90m# src/test/java/feature/Home.feature:91&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mOpen Home page&amp#27;[0m                                                                                                               &amp#27;[90m# stepDef.HomeStepDef.openHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                                            &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                                                  &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                                               &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick the image in the Arrivals that has a price less than 450 rps&amp#27;[0m                                                            &amp#27;[90m# stepDef.HomeStepDef.clickArrival2()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m                         &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                                         &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                                          &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:99)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Item link which navigates to proceed to check out page.&amp#27;[0m                                                          &amp#27;[90m# stepDef.HomeStepDef.clickMenuCart()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser can click on the Item link in menu item after adding the book in to the basket which leads to the check out page&amp#27;[0m         &amp#27;[90m# stepDef.HomeStepDef.verifyCheckOutPage()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mEnter the Coupon code as â€˜krishnasakinalaâ€™ to get 50rps off on the total.&amp#27;[0m                                                     &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser can not able to apply coupon by entering â€˜krishnasakinalaâ€™ in the coupon textbox which give 50rps off on the total price&amp#27;[0m &amp#27;[90m# null&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 294411 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 23221
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:37:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 24580
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:37:57 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="11. Home-Arrivals-Add to Basket-Items-Remove book" classname="HOME PAGE" time="44.369">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 11. Home-Arrivals-Add to Basket-Items-Remove book                                                                  &amp#27;[90m# src/test/java/feature/Home.feature:105&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser successfully login to the web page&amp#27;[0m                                                                              &amp#27;[90m# stepDef.HomeStepDef.userHasLogin()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                                          &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                                       &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m                 &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                                 &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                                  &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:113)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Item link which navigates to proceed to check out page.&amp#27;[0m                                                  &amp#27;[90m# stepDef.HomeStepDef.clickMenuCart()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser can click on the Item link in menu item after adding the book in to the basket which leads to the check out page&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyCheckOutPage()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Remove this icon in Check out page which removes that book from the grid.&amp#27;[0m                                &amp#27;[90m# stepDef.HomeStepDef.clickIconRemove()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser has the feasibility to remove the book at the time of check out also&amp#27;[0m                                             &amp#27;[90m# stepDef.HomeStepDef.verifyRemoveTheBook()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 184477 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 4597
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:38:01 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 12907
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:38:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="12. Home-Arrivals-Add to Basket-Items-Add book" classname="HOME PAGE" time="46.672">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 12. Home-Arrivals-Add to Basket-Items-Add book                                                     &amp#27;[90m# src/test/java/feature/Home.feature:119&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser successfully login to the web page&amp#27;[0m                                                              &amp#27;[90m# stepDef.HomeStepDef.userHasLogin()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                          &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                       &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                 &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                  &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:127)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Item link which navigates to proceed to check out page.&amp#27;[0m                                  &amp#27;[90m# stepDef.HomeStepDef.clickMenuCart()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mClick on text box value under quantity in Check out page to add or subtract books.&amp#27;[0m                     &amp#27;[90m# stepDef.HomeStepDef.clickTextBoxQuantity()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mNow after the above change â€˜Update Basketâ€™ button will turn into Clickable mode.&amp#27;[0m                      &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Update Basket to reflect those changes&amp#27;[0m                                                   &amp#27;[90m# stepDef.HomeStepDef.clickUpdateBasket()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser has the feasibility to Update Basket at the time of check out.&amp#27;[0m                                   &amp#27;[90m# stepDef.HomeStepDef.verifyUpdateBasket1()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 184474 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 33811
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:38:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 15752
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:39:28 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="13. Home-Arrivals-Add to Basket-Items-Check-out-Book Final price" classname="HOME PAGE" time="38.378">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 13. Home-Arrivals-Add to Basket-Items-Check-out-Book Final price                                   &amp#27;[90m# src/test/java/feature/Home.feature:134&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser successfully login to the web page&amp#27;[0m                                                              &amp#27;[90m# stepDef.HomeStepDef.userHasLogin()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                          &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                       &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                 &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                  &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:142)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Item link which navigates to proceed to check out page.&amp#27;[0m                                  &amp#27;[90m# stepDef.HomeStepDef.clickMenuCart()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mNow User can find the Total price of the book in the Check out grid.&amp#27;[0m                                  &amp#27;[90m# stepDef.HomeStepDef.verifyTotalPrice()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 184525 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 17022
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:39:32 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 27164
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:40:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="14. Home-Arrivals-Add to Basket-Items-Check-out-Update Basket" classname="HOME PAGE" time="42.671">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 14. Home-Arrivals-Add to Basket-Items-Check-out-Update Basket                                      &amp#27;[90m# src/test/java/feature/Home.feature:146&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser successfully login to the web page&amp#27;[0m                                                              &amp#27;[90m# stepDef.HomeStepDef.userHasLogin()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                          &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                       &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                 &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                  &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:154)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Item link which navigates to proceed to check out page.&amp#27;[0m                                  &amp#27;[90m# stepDef.HomeStepDef.clickMenuCart()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mClick on text box value under quantity in Check out page to subtract books.&amp#27;[0m                            &amp#27;[90m# stepDef.HomeStepDef.clickSubTractTextBoxQuantity()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mNow after the above change â€˜Update Basketâ€™ button will turn into Clickable mode.&amp#27;[0m                      &amp#27;[90m# null&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Update Basket to reflect those changes&amp#27;[0m                                                   &amp#27;[90m# stepDef.HomeStepDef.clickUpdateBasket()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser has the feasibility to Update Basket at the time of check out&amp#27;[0m                                    &amp#27;[90m# stepDef.HomeStepDef.verifyUpdateBasket2()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 182405 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 17932
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:40:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 7525
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:40:49 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="15. Home-Arrivals-Add to Basket-Items-Check-out-Total &amp; Sub-total condition" classname="HOME PAGE" time="38.429">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 15. Home-Arrivals-Add to Basket-Items-Check-out-Total & Sub-total condition                        &amp#27;[90m# src/test/java/feature/Home.feature:161&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser successfully login to the web page&amp#27;[0m                                                              &amp#27;[90m# stepDef.HomeStepDef.userHasLogin()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                          &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                       &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                 &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                  &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:169)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Item link which navigates to proceed to check out page.&amp#27;[0m                                  &amp#27;[90m# stepDef.HomeStepDef.clickMenuCart()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mNow user can find total and subtotal values just above the Proceed to Checkout button.&amp#27;[0m                 &amp#27;[90m# stepDef.HomeStepDef.visibleTotalAndSubtotal()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe total always > subtotal because taxes are added in the subtotal&amp#27;[0m                                   &amp#27;[90m# stepDef.HomeStepDef.verifyTotalGreaterThanSubtotal()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 184632 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 43675
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:40:53 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 3920
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:41:28 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="16. Home-Arrivals-Add to Basket-Items-Check-out functionality" classname="HOME PAGE" time="38.714">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 16. Home-Arrivals-Add to Basket-Items-Check-out functionality                                      &amp#27;[90m# src/test/java/feature/Home.feature:174&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser successfully login to the web page&amp#27;[0m                                                              &amp#27;[90m# stepDef.HomeStepDef.userHasLogin()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                          &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                       &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                 &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                  &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:182)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Item link which navigates to proceed to check out page.&amp#27;[0m                                  &amp#27;[90m# stepDef.HomeStepDef.clickMenuCart()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mNow user can find total and subtotal values just above the Proceed to Checkout button.&amp#27;[0m                 &amp#27;[90m# stepDef.HomeStepDef.visibleTotalAndSubtotal()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe total always > subtotal because taxes are added in the subtotal&amp#27;[0m                                   &amp#27;[90m# stepDef.HomeStepDef.verifyTotalGreaterThanSubtotal()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mNow click on Proceed to Check out button which navigates to payment gateway page.&amp#27;[0m                      &amp#27;[90m# stepDef.HomeStepDef.clickButtonProcessToCheckout()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mClicking on Proceed to Checkout button leads to payment gateway page&amp#27;[0m                                  &amp#27;[90m# stepDef.HomeStepDef.verifyLeadToPaymentGatewayPage()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 184652 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 6053
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:41:32 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 13599
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:42:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="17. Home-Arrivals-Add to Basket-Items-Check-out-Payment Gateway" classname="HOME PAGE" time="42.758">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 17. Home-Arrivals-Add to Basket-Items-Check-out-Payment Gateway                                                                                   &amp#27;[90m# src/test/java/feature/Home.feature:189&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser successfully login to the web page&amp#27;[0m                                                                                                             &amp#27;[90m# stepDef.HomeStepDef.userHasLogin()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                                                                   &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                                                                         &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                                                                      &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                                                                  &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m                                                &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                                                                &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                                                                 &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:197)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Item link which navigates to proceed to check out page.&amp#27;[0m                                                                                 &amp#27;[90m# stepDef.HomeStepDef.clickMenuCart()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mNow user can find total and subtotal values just above the Proceed to Checkout button.&amp#27;[0m                                                                &amp#27;[90m# stepDef.HomeStepDef.visibleTotalAndSubtotal()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe total always > subtotal because taxes are added in the subtotal&amp#27;[0m                                                                                  &amp#27;[90m# stepDef.HomeStepDef.verifyTotalGreaterThanSubtotal()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mNow click on Proceed to Check out button which navigates to payment gateway page.&amp#27;[0m                                                                     &amp#27;[90m# stepDef.HomeStepDef.clickButtonProcessToCheckout()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mClicking on Proceed to Checkout button leads to payment gateway page&amp#27;[0m                                                                                 &amp#27;[90m# stepDef.HomeStepDef.verifyLeadToPaymentGatewayPage()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser can view Billing Details,Order Details,Additional details and Payment gateway details.&amp#27;[0m                                                          &amp#27;[90m# stepDef.HomeStepDef.viewItemInPaymentGatewayPage()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mNow user can fill his details in billing details form and can opt any payment in the payment gateway like Direct bank transfer,cheque,cash or paypal.&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.fillDataInPaymentGatewayPage()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser has the feasibility to add coupon in the payment gateway page and also he can find billing,order and additional details.&amp#27;[0m                        &amp#27;[90m# stepDef.HomeStepDef.verifyInformationInPaymentGatewayPage()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 182349 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 37775
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:42:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 31882
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:42:49 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="18. Home-Arrivals-Add to Basket-Items-Check-out-Payment Gateway-Place order" classname="HOME PAGE" time="40.498">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></error>
+    <system-out><![CDATA[
+Scenario: 18. Home-Arrivals-Add to Basket-Items-Check-out-Payment Gateway-Place order                                                                                                      &amp#27;[90m# src/test/java/feature/Home.feature:207&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser successfully login to the web page&amp#27;[0m                                                                                                                                            &amp#27;[90m# stepDef.HomeStepDef.userHasLogin()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Shop Menu&amp#27;[0m                                                                                                                                                                  &amp#27;[90m# stepDef.HomeStepDef.clickShopMenu()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mNow click on Home menu button&amp#27;[0m                                                                                                                                                        &amp#27;[90m# stepDef.HomeStepDef.clickHomeMenuButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Home page must contains only three Arrivals&amp#27;[0m                                                                                                                                     &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalsNumber()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mNow click the image in the Arrivals&amp#27;[0m                                                                                                                                                 &amp#27;[90m# stepDef.HomeStepDef.clickArrival1()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mImage should be clickable and should navigate to next page where user can add that book to his basket&amp#27;[0m                                                                               &amp#27;[90m# stepDef.HomeStepDef.verifyImageShouldNavigate()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on the Add To Basket button which adds that book to your basket&amp#27;[0m                                                                                                               &amp#27;[90m# stepDef.HomeStepDef.clickAddToBasketButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser can view that Book in the Menu item with price.&amp#27;[0m                                                                                                                                &amp#27;[90m# stepDef.HomeStepDef.verifyArrivalImageAddToBasket()&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+	at common.BasePage.waitElementVisible(BasePage.java:33)
+	at page.HomePage.verifyArrivalImageAddToBasket(HomePage.java:310)
+	at stepDef.HomeStepDef.verifyArrivalImageAddToBasket(HomeStepDef.java:173)
+	at âœ½.User can view that Book in the Menu item with price.(file:///D:/FinalProject/src/test/java/feature/Home.feature:215)
+&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mNow click on Item link which navigates to proceed to check out page.&amp#27;[0m                                                                                                                &amp#27;[90m# stepDef.HomeStepDef.clickMenuCart()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mNow user can find total and subtotal values just above the Proceed to Checkout button.&amp#27;[0m                                                                                               &amp#27;[90m# stepDef.HomeStepDef.visibleTotalAndSubtotal()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mThe total always > subtotal because taxes are added in the subtotal&amp#27;[0m                                                                                                                 &amp#27;[90m# stepDef.HomeStepDef.verifyTotalGreaterThanSubtotal()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mNow click on Proceed to Check out button which navigates to payment gateway page.&amp#27;[0m                                                                                                    &amp#27;[90m# stepDef.HomeStepDef.clickButtonProcessToCheckout()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mClicking on Proceed to Checkout button leads to payment gateway page&amp#27;[0m                                                                                                                &amp#27;[90m# stepDef.HomeStepDef.verifyLeadToPaymentGatewayPage()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mUser can view Billing Details,Order Details,Additional details and Payment gateway details.&amp#27;[0m                                                                                         &amp#27;[90m# stepDef.HomeStepDef.viewItemInPaymentGatewayPage()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mNow user can fill his details in billing details form and can opt any payment in the payment gateway like Direct bank transfer,cheque,cash or paypal.&amp#27;[0m                                &amp#27;[90m# stepDef.HomeStepDef.fillDataInPaymentGatewayPage()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mNow click on Place Order button to complete process&amp#27;[0m                                                                                                                                  &amp#27;[90m# stepDef.HomeStepDef.clickButtonPlaceOrder()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mOn clicking place-order button user completes the process where the page navigates to Order confirmation page with order details,bank details,customer details and billing details.&amp#27;[0m &amp#27;[90m# stepDef.HomeStepDef.verifyOrderConfirmationPage()&amp#27;[0m
+
+    Embedding anh [image/png 3486 bytes]
+
+
+    Embedding anh [image/png 184471 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 21718
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:42:53 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 13565
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 31, 2021 2:43:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+</testsuite>

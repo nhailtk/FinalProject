@@ -1,0 +1,49 @@
+-------------------------------------------------------------------------------
+Test set: runner.RunHomeTestSuite
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 0, Errors: 15, Skipped: 0, Time elapsed: 672.75 s <<< FAILURE! - in runner.RunHomeTestSuite
+HOME PAGE.4. Home page - Arrivals-Images-Description  Time elapsed: 28.229 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.5. Home page - Arrivals-Images-Reviews  Time elapsed: 28.866 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.6. Home page - Arrivals-Images-Add to Basket  Time elapsed: 32.845 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.7. Home page - Arrivals-Add to Basket with more books  Time elapsed: 33.185 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.8. Home-Arrivals-Add to Basket-Items  Time elapsed: 31.311 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.9. Home-Arrivals-Add to Basket-Items-Coupon  Time elapsed: 42.676 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.10. Home-Arrivals-Add to Basket-Items-Coupon value<450  Time elapsed: 32.383 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.11. Home-Arrivals-Add to Basket-Items-Remove book  Time elapsed: 44.369 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.12. Home-Arrivals-Add to Basket-Items-Add book  Time elapsed: 46.672 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.13. Home-Arrivals-Add to Basket-Items-Check-out-Book Final price  Time elapsed: 38.378 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.14. Home-Arrivals-Add to Basket-Items-Check-out-Update Basket  Time elapsed: 42.671 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.15. Home-Arrivals-Add to Basket-Items-Check-out-Total & Sub-total condition  Time elapsed: 38.429 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.16. Home-Arrivals-Add to Basket-Items-Check-out functionality  Time elapsed: 38.714 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.17. Home-Arrivals-Add to Basket-Items-Check-out-Payment Gateway  Time elapsed: 42.758 s  <<< ERROR!
+java.lang.NullPointerException
+
+HOME PAGE.18. Home-Arrivals-Add to Basket-Items-Check-out-Payment Gateway-Place order  Time elapsed: 40.498 s  <<< ERROR!
+java.lang.NullPointerException
+
